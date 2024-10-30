@@ -102,7 +102,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <stropts.h>
+//#include <stropts.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/types.h>
@@ -506,7 +506,7 @@ int	initevents ( int useonlyone, int mutex11 )
 				xinlist = NULL;
 			}
 		}
-		fclose ( pf );
+		pclose ( pf );
 	}
 	for ( i = 0; i < MAXEVDEVS; ++i )
 	{
@@ -665,7 +665,7 @@ int	list_input_devices ()
 		{
 			printf ( "\tx11-mutable information not available.\n" );
 		}
-		fclose ( pf );
+		pclose ( pf );
 	}
 	printf ( "List of available input devices:\n");
 	printf ( "num\tVendor/Product, Name, -x compatible (x/-)\n" );
